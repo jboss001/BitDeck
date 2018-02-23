@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BitDeck_Example' do
+  pod 'BitDeck', :path => '../'
+
+  target 'BitDeck_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
