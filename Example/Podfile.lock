@@ -1,0 +1,16 @@
+PODS:
+  - BitDeck (0.1.0)
+
+DEPENDENCIES:
+  - BitDeck (from `../`)
+
+EXTERNAL SOURCES:
+  BitDeck:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BitDeck: d3b6e8c80ff916a1fab3d2384d5f8d96717dc701
+
+PODFILE CHECKSUM: a2720e65041dcc11c04afea169938fbfd2dceb13
+
+COCOAPODS: 1.4.0.rc.1
