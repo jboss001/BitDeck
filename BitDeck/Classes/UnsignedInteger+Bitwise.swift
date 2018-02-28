@@ -110,3 +110,7 @@ public struct BitIterator<N:UnsignedInteger>: IteratorProtocol {
         return integer
     }
 }
+
+func sdf() {
+    
+}

@@ -14,6 +14,9 @@
 		92C274F2834AE10D4077BC290DC045C7 /* Pods-BitDeck_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF61C238C89448A52ED9A93724C1F37 /* Pods-BitDeck_Example-dummy.m */; };
 		9826FD9F4FF2B369AFD6983948EE1273 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		A37399963F04FDCD438E3F247D493E5D /* Pods-BitDeck_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88883689DEDC75B668E2AB46546E4CF5 /* Pods-BitDeck_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCAE5310204623C100ABE8D5 /* BitCardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAE530F204623C100ABE8D5 /* BitCardSet.swift */; };
+		CCAE53132046298700ABE8D5 /* bits.h in Headers */ = {isa = PBXBuildFile; fileRef = CCAE53112046298700ABE8D5 /* bits.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCAE53142046298700ABE8D5 /* bits.c in Sources */ = {isa = PBXBuildFile; fileRef = CCAE53122046298700ABE8D5 /* bits.c */; };
 		CCF7F6AB2040B6E9009D7E40 /* UnsignedInteger+Bitwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF7F6AA2040B6E9009D7E40 /* UnsignedInteger+Bitwise.swift */; };
 		CCF7F6AD2040C815009D7E40 /* BitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF7F6AC2040C815009D7E40 /* BitCard.swift */; };
 		F35C67CCD5C4DDFA323D83934B905629 /* BitDeck-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BF46D3AE86A0EF392880F2C26C398E /* BitDeck-dummy.m */; };
@@ -59,6 +62,9 @@
 		AAD83623AFA1E03B6A7850AE26875786 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF8AA64F2AB72D6DFA1534DF21556012 /* Pods-BitDeck_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BitDeck_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B3DE4B69C815EC77847AC39BE9D3C43F /* BitDeck.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = BitDeck.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CCAE530F204623C100ABE8D5 /* BitCardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCardSet.swift; sourceTree = "<group>"; };
+		CCAE53112046298700ABE8D5 /* bits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bits.h; sourceTree = "<group>"; };
+		CCAE53122046298700ABE8D5 /* bits.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bits.c; sourceTree = "<group>"; };
 		CCF7F6AA2040B6E9009D7E40 /* UnsignedInteger+Bitwise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnsignedInteger+Bitwise.swift"; sourceTree = "<group>"; };
 		CCF7F6AC2040C815009D7E40 /* BitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCard.swift; sourceTree = "<group>"; };
 		CCF7F6AF2040CC1B009D7E40 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -207,7 +213,10 @@
 			isa = PBXGroup;
 			children = (
 				CCF7F6AC2040C815009D7E40 /* BitCard.swift */,
+				CCAE530F204623C100ABE8D5 /* BitCardSet.swift */,
 				CCF7F6AA2040B6E9009D7E40 /* UnsignedInteger+Bitwise.swift */,
+				CCAE53112046298700ABE8D5 /* bits.h */,
+				CCAE53122046298700ABE8D5 /* bits.c */,
 				CCF7F6B12040CC23009D7E40 /* .gitkeep */,
 			);
 			name = Classes;
@@ -268,6 +277,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCAE53132046298700ABE8D5 /* bits.h in Headers */,
 				F36C6BE315CC8274485042ED96879ADE /* BitDeck-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +378,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCAE53142046298700ABE8D5 /* bits.c in Sources */,
+				CCAE5310204623C100ABE8D5 /* BitCardSet.swift in Sources */,
 				CCF7F6AB2040B6E9009D7E40 /* UnsignedInteger+Bitwise.swift in Sources */,
 				F35C67CCD5C4DDFA323D83934B905629 /* BitDeck-dummy.m in Sources */,
 				CCF7F6AD2040C815009D7E40 /* BitCard.swift in Sources */,
@@ -398,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2DB424B25266E9249A774CA1B4F0F371 /* BitDeck.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -645,6 +658,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2DB424B25266E9249A774CA1B4F0F371 /* BitDeck.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

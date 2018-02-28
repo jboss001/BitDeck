@@ -7,7 +7,12 @@
 
 import Foundation
 
-enum BitSuit: UInt64 {
+/*
+ * The four suits of a traditional french playing card deck.
+ * The associated values of each suit represent the range that their
+ * respective cards with regard to the card's bit indices.
+ */
+public enum BitSuit: UInt64 {
     case diamonds = 0x1FFF
     case hearts = 0x3FFD000
     case clubs = 0x7FFC000000
@@ -32,4 +37,16 @@ enum BitSuit: UInt64 {
  * 12 : A♦︎     25 : A♥︎     38 : A♣︎      51 : A♠︎
  *
  */
-typealias BitCard = UInt64
+public typealias BitCard = UInt64
+
+extension BitCard {
+    
+    var suit: BitSuit {
+        switch self {
+        case let x where x < 13: return .diamonds
+        case let x where x < 26: return .hearts
+        case let x where x < 39: return .clubs
+        default: return .spades
+        }
+    }
+}
